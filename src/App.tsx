@@ -1,13 +1,21 @@
+import React from 'react';
+import Navbar from './components/NavBar';
 
-function App() {
+const App: React.FC = () => {
+  const links = [
+    { label: 'Accueil', href: '/' },
+    { label: 'Projets', href: '/projets' },
+    { label: 'Contact', href: '/contact' },
+  ];
 
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </>
-  )
-}
+    <div>
+      <Navbar links={links} />
+      <main>
+        <h1>Bienvenue sur mon portfolio !</h1>
+      </main>
+    </div>
+  );
+};
 
-export default App
+export default App;
