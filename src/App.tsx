@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './components/NavBar';
+import Description from './components/Description';
 
 const App: React.FC = () => {
   const links = [
@@ -9,11 +10,9 @@ const App: React.FC = () => {
   ];
 
   return (
-    <div>
+    <div className='bg-slate-950'>
       <Navbar links={links} />
-      <main>
-        <h1>Bienvenue sur mon portfolio !</h1>
-      </main>
+      <Description/>
     </div>
   );
 };

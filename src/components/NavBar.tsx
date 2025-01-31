@@ -22,7 +22,6 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
         lg:px-24">
 
       <img src="/Logo-LD.png" alt="logo" />
-        {/* Liens de navigation */}
         <ul className="flex items-center">
           {links.map((link, index) => (
             <li key={index} className='
@@ -49,5 +48,4 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
   );
 };
 
-// Export du composant
 export default Navbar;
