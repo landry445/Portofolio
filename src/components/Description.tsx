@@ -2,10 +2,9 @@ export default function Description() {
     return (
         <div className="flex justify-center items-center h-screen bg-stone-950 text-white">
           <div className="grid grid-cols-2 gap-8 items-center max-w-5xl">
-            {/* Left Section */}
             <div className="flex flex-col items-start space-y-4">
               <h1 className="text-4xl font-bold">
-                <span className="text-amber-400 ">Jérôme Tissot</span>
+                <span className="bg-gradient-to-r from-[#024945] to-[#12a89c] bg-clip-text text-transparent ">Landry Dupont</span>
               </h1>
               <h2 className="text-2xl font-semibold">DÉVELOPPEUR FULLSTACK</h2>
               <div className="flex space-x-4 mt-4">
@@ -30,12 +29,11 @@ export default function Description() {
               </div>
             </div>
     
-            {/* Right Section */}
             <div className="relative flex justify-center items-center">
-              <div className="rounded-xl overflow-hidden bg-blue-500 w-48 h-48 flex items-center justify-center">
+              <div className="rounded-xl overflow-hidden bg-gradient-to-r from-[#024945] to-[#12a89c]  w-48 h-48 flex items-center justify-center">
                 <img
-                  src="https://via.placeholder.com/150" // Replace with actual image URL
-                  alt="Jérôme Tissot"
+                  src="photo-Landry.jpg" 
+                  alt="Landry Dupont"
                   className="w-full h-full object-cover"
                 />
               </div>
