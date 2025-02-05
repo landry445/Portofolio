@@ -1,10 +1,12 @@
 export default function Description() {
   return (
-      <div className="flex justify-center items-center min-h-screen bg-stone-950 text-white px-6">
+    <div className="relative min-h-screen">
+      <div className="absolute inset-0 bg-[url('/setup.webp')] bg-cover bg-center bg-no-repeat filter brightness-70"></div>
+      <div className="relative z-10 flex justify-center items-center min-h-screen text-white px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full max-w-7xl">
           <div className="flex flex-col items-start space-y-4 text-center md:text-left">
             <h1 className="text-5xl font-bold w-full">
-              <span className="bg-gradient-to-r from-[#024945] to-[#12a89c] bg-clip-text text-transparent">Landry Dupont</span>
+              <span className="text-white">Landry Dupont</span>
             </h1>
             <h2 className="text-3xl font-semibold">DÉVELOPPEUR FULLSTACK</h2>
             <div className="flex flex-wrap justify-center md:justify-start space-x-4 mt-4">
@@ -30,13 +32,7 @@ export default function Description() {
           </div>
   
           <div className="relative flex justify-center items-center w-full">
-            <div className="rounded-xl overflow-hidden bg-gradient-to-r from-[#024945] to-[#12a89c] w-64 h-64 flex items-center justify-center">
-              <img
-                src="photo-Landry.jpg" 
-                alt="Landry Dupont"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            
             <button
               className="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 p-2 rounded-full"
               aria-label="Edit Profile"
@@ -64,6 +60,6 @@ export default function Description() {
           </div>
         </div>
       </div>
-    );
+    </div>
+  );
 }
-

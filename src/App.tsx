@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from './components/NavBar';
-import Description from './components/Description';
+import Navbar from './components/header/NavBar';
+import Description from './components/About';
 
 const App: React.FC = () => {
   const links = [
@@ -10,9 +10,11 @@ const App: React.FC = () => {
   ];
 
   return (
-    <div className='bg-slate-950'>
+    <div className="bg-slate-950">
       <Navbar links={links} />
-      <Description/>
+      <div className="ml-[300px]">
+        <Description />
+      </div>
     </div>
   );
 };
