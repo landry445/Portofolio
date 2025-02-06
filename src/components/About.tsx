@@ -1,7 +1,10 @@
 export default function Description() {
   return (
     <div className="relative min-h-screen">
+      {/* Arrière-plan avec filtre sur l'image */}
       <div className="absolute inset-0 bg-[url('/setup.webp')] bg-cover bg-center bg-no-repeat filter brightness-70"></div>
+      
+      {/* Contenu placé au-dessus de l'arrière-plan */}
       <div className="relative z-10 flex justify-center items-center min-h-screen text-white px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full max-w-7xl">
           <div className="flex flex-col items-start space-y-4 text-center md:text-left">
@@ -32,7 +35,6 @@ export default function Description() {
           </div>
   
           <div className="relative flex justify-center items-center w-full">
-            
             <button
               className="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 p-2 rounded-full"
               aria-label="Edit Profile"
