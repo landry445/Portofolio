@@ -1,7 +1,7 @@
 import React from 'react';
 
 export type NavbarProps = {
-  links: { label: string; href: string }[];
+  links: { label: string; href: string; icon?: React.ReactNode; }[];
 };
 
 const Navbar: React.FC<NavbarProps> = ({ links }) => {
@@ -16,13 +16,34 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
             <li key={index} className="py-3 border-t border-stone-700 text-center">
               <a
                 href={link.href}
-                className="text-stone-50 hover:text-[#12a89c] transition-all duration-300 block"
+                className="flex items-center text-stone-50 hover:text-[#12a89c] transition-all duration-300"
               >
+                {link.icon && <span className="mr-2">{link.icon}</span>}
                 {link.label}
               </a>
             </li>
           ))}
         </ul>
+      </div>
+      <div className="flex flex-wrap justify-center md:justify-start space-x-4 mt-4">
+        <a
+          href="#"
+          className="bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg font-medium transition"
+        >
+          GitHub
+        </a>
+        <a
+          href="#"
+          className="bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg font-medium transition"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="#"
+          className="bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg font-medium transition"
+        >
+          Mail
+        </a>
       </div>
     </nav>
   );

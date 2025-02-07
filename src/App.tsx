@@ -2,10 +2,12 @@ import React from 'react';
 import Navbar from './components/header/NavBar';
 import MobileNavbar from './components/header/MobileNavbar';
 import About from './components/About';
+import HomeIcon from './components/icons/HomeIcon'
 
 const App: React.FC = () => {
   const links = [
-    { label: 'Accueil', href: '/' },
+    { label: 'Accueil', href: '/', icon: <HomeIcon style="w-6 h-6" /> },
+    { label: 'Competences', href: '/competences' },
     { label: 'Projets', href: '/projets' },
     { label: 'Contact', href: '/contact' },
   ];

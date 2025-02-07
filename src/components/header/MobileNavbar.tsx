@@ -10,7 +10,7 @@ const MobileNavbar: React.FC<NavbarProps> = ({ links }) => {
       <div className="flex justify-end p-4">
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="text-white focus:outline-none"
+          className="text-white focus:outline-none cursor-pointer bg-[#12a89c]"
           aria-label="Toggle menu"
         >
           <div className="relative w-8 h-8">
@@ -24,9 +24,14 @@ const MobileNavbar: React.FC<NavbarProps> = ({ links }) => {
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
-            {/* Icône croix */}
+            {/* Icône croix avec curseur pointer */}
             <svg
               className={`absolute top-0 left-0 w-8 h-8 transition-opacity duration-300 ${
                 menuOpen ? 'opacity-100' : 'opacity-0'
@@ -36,7 +41,12 @@ const MobileNavbar: React.FC<NavbarProps> = ({ links }) => {
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </div>
         </button>
@@ -45,7 +55,7 @@ const MobileNavbar: React.FC<NavbarProps> = ({ links }) => {
       {/* Overlay pour fermer le menu */}
       {menuOpen && (
         <div
-          className="fixed inset-0 z-20 "
+          className="fixed inset-0 z-20"
           onClick={() => setMenuOpen(false)}
         ></div>
       )}
@@ -65,9 +75,10 @@ const MobileNavbar: React.FC<NavbarProps> = ({ links }) => {
               <li key={index} className="py-3 border-t border-stone-700 text-center">
                 <a
                   href={link.href}
-                  className="text-stone-50 hover:text-[#12a89c] transition-all duration-300 block"
+                  className=" flex items-center text-stone-50 hover:text-[#12a89c] transition-all duration-300"
                   onClick={() => setMenuOpen(false)}
                 >
+                  {link.icon && <span className="mr-2">{link.icon}</span>}
                   {link.label}
                 </a>
               </li>
