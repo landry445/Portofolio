@@ -1,17 +1,13 @@
-import { useStateContext } from "../../context/ContextProvider"
+interface MessageIconProps {
+  style?: string;
+}
 
-
-const MessageIcon = () => {
-
-  const {themeStyle} = useStateContext();
+const MessageIcon: React.FC<MessageIconProps>= ({style}) => {
 
   return (
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
-      width="16" 
-      height="16" 
-      fill={ themeStyle.svgTertiary }
-      className="bi bi-send-fill" 
+      className={ style } 
       viewBox="0 0 16 16"
     >
     <path 

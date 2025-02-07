@@ -1,4 +1,8 @@
-const ProjectIcon = ({style}) => {
+interface ProjectIconProps {
+  style?: string;
+}
+
+const ProjectIcon: React.FC<ProjectIconProps>  = ({style}) => {
   return (
   <svg 
     xmlns="http://www.w3.org/2000/svg" 

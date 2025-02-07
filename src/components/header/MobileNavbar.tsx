@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { NavbarProps } from './NavBar';
+import MailIcon from '../icons/MailIcon';
+import LinkIcon from '../icons/LinkIcon';
+import GitHubIcon from '../icons/GitHubIcon';
 
 const MobileNavbar: React.FC<NavbarProps> = ({ links }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,9 +34,9 @@ const MobileNavbar: React.FC<NavbarProps> = ({ links }) => {
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
-            {/* Icône croix avec curseur pointer */}
+            {/* Icône croix */}
             <svg
-              className={`absolute top-0 left-0 w-8 h-8 transition-opacity duration-300 ${
+              className={`absolute top-0 left-0 w-8 h-8 cursor-pointer transition-opacity duration-300 ${
                 menuOpen ? 'opacity-100' : 'opacity-0'
               }`}
               fill="none"
@@ -54,10 +57,7 @@ const MobileNavbar: React.FC<NavbarProps> = ({ links }) => {
 
       {/* Overlay pour fermer le menu */}
       {menuOpen && (
-        <div
-          className="fixed inset-0 z-20"
-          onClick={() => setMenuOpen(false)}
-        ></div>
+        <div className="fixed inset-0 z-20" onClick={() => setMenuOpen(false)}></div>
       )}
 
       {/* Menu burger latéral glissant depuis la gauche */}
@@ -67,15 +67,48 @@ const MobileNavbar: React.FC<NavbarProps> = ({ links }) => {
         }`}
       >
         <div className="flex flex-col h-full px-4 py-6">
+          {/* Photo */}
           <div className="flex justify-center mb-6">
-            <img src="/LD_logo_.png" alt="logo" className="w-[53px] h-[53px]" />
+            <img
+              src="/photo-Landry.png"
+              alt="logo"
+              className="max-w-[100px] h-auto bg-white rounded-[20px] border-8 border-solid border-[#292f37]"
+            />
           </div>
+          {/* Rangée d'icônes horizontale */}
+          <div className="flex justify-center space-x-4 mb-6">
+            <a
+              href="https://github.com/yourusername"
+              className="text-white hover:text-[#12a89c]"
+            >
+              {/* Exemple d'icône GitHub (remplacez le SVG par votre icône personnalisée si besoin) */}
+              <GitHubIcon/>
+            </a>
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              className="text-white hover:text-[#12a89c]"
+            >
+              {/* Exemple d'icône LinkedIn */}
+             <LinkIcon/>
+            </a>
+            <a
+              href="mailto:someone@example.com"
+              className="text-white hover:text-[#12a89c]"
+            >
+              {/* Exemple d'icône Mail */}
+              <MailIcon/>
+            </a>
+          </div>
+          {/* Liste des liens */}
           <ul className="flex flex-col">
             {links.map((link, index) => (
-              <li key={index} className="py-3 border-t border-stone-700 text-center">
+              <li
+                key={index}
+                className="py-3 border-t border-stone-700 text-center"
+              >
                 <a
                   href={link.href}
-                  className=" flex items-center text-stone-50 hover:text-[#12a89c] transition-all duration-300"
+                  className="flex items-center text-stone-50 hover:text-[#12a89c] transition-all duration-300"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.icon && <span className="mr-2">{link.icon}</span>}

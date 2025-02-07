@@ -1,4 +1,8 @@
-const ContactIcon = ({style}) => {
+interface ContactIconProps {
+  style?: string;
+}
+
+const ContactIcon: React.FC<ContactIconProps> = ({style}) => {
   return (
   <svg 
     xmlns="http://www.w3.org/2000/svg" 

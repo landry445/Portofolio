@@ -3,13 +3,16 @@ import Navbar from './components/header/NavBar';
 import MobileNavbar from './components/header/MobileNavbar';
 import About from './components/About';
 import HomeIcon from './components/icons/HomeIcon'
+import InfoIcon from './components/icons/InfoIcon'
+import ProjectIcon from './components/icons/ProjectIcon'
+import ContactIcon from './components/icons/ContactIcon'
 
 const App: React.FC = () => {
   const links = [
     { label: 'Accueil', href: '/', icon: <HomeIcon style="w-6 h-6" /> },
-    { label: 'Competences', href: '/competences' },
-    { label: 'Projets', href: '/projets' },
-    { label: 'Contact', href: '/contact' },
+    { label: 'Competences', href: '/competences', icon: <InfoIcon style="w-6 h-6"/> },
+    { label: 'Projets', href: '/projets', icon: <ProjectIcon style="w-6 h-6"/> },
+    { label: 'Contact', href: '/contact', icon: <ContactIcon style="w-6 h-6"/> },
   ];
 
   return (

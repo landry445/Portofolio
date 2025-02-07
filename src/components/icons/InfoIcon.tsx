@@ -1,4 +1,8 @@
-const InfoIcon = ({style}) => {
+interface InfoIconProps {
+  style?: string;
+}
+
+const InfoIcon: React.FC<InfoIconProps> = ({style}) => {
   return (
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
