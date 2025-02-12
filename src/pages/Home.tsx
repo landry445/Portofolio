@@ -1,7 +1,4 @@
-// src/pages/Description.tsx
-import React from 'react';
-
-export default function Description() {
+export default function Home() {
   return (
     <div className="relative min-h-screen">
       {/* Arrière-plan avec filtre sur l'image */}

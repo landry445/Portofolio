@@ -1,5 +1,5 @@
 interface GitHubIconProps {
-  style?: string;
+  style?: React.CSSProperties;
 }
 
 const GitHubIcon: React.FC<GitHubIconProps> = () => {

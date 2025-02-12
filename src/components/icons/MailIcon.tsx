@@ -1,5 +1,5 @@
 interface MailIconProps {
-  style?: string;
+  style?: React.CSSProperties;
 }
 
 const MailIcon: React.FC<MailIconProps> = () => {
