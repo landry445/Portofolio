@@ -8,7 +8,7 @@ const MobileNavbar: React.FC<NavbarProps> = ({ links }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="min-[1200px]:hidden bg-transparent absolute z-29 w-full">
+    <div className="min-[1024px]:hidden bg-transparent absolute z-29 w-full">
       {/* Header mobile avec le bouton qui bascule entre hamburger et croix */}
       <div className="flex justify-end p-4">
         <button

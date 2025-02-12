@@ -1,3 +1,6 @@
+// src/pages/Description.tsx
+import React from 'react';
+
 export default function Description() {
   return (
     <div className="relative min-h-screen">
